@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Alphaschoon | Professionele interieur schoonmaak</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --forest-950:#0E2018;
+      --forest-800:#1F3B2C;
+      --forest-700:#2A4A38;
+
+      --sage-400:#9FB39A;
+      --sage-200:#D7E0D3;
+
+      --linen-50:#F6F3EC;
+      --linen-100:#EFEAE0;
+
+      --brass-500:#B8924A;
+      --brass-600:#9C7A38;
+
+      --ink-900:#14201A;
+      --ink-600:#4A564E;
+
+      --white:#FFFFFF;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:var(--linen-50);
+      color:var(--ink-900);
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    button,
+    input{
+      font-family:inherit;
+    }
+
+    .container{
+      width:min(1180px, calc(100% - 40px));
+      margin:0 auto;
+    }
+
+    /* =========================
+       NAV
+    ========================= */
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(14,32,24,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav-inner{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+
+    .logo{
+      font-family:'Fraunces',serif;
+      font-size:27px;
+      font-weight:600;
+      color:var(--linen-50);
+      letter-spacing:-.5px;
+    }
+
+    .logo span{
+      color:var(--brass-500);
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      color:var(--sage-200);
+      font-size:14px;
+    }
+
+    .nav-links a{
+      transition:.2s ease;
+    }
+
+    .nav-links a:hover{
+      color:var(--white);
+    }
+
+    .nav-button{
+      padding:11px 18px;
+      background:var(--brass-500);
+      color:var(--forest-950);
+      border-radius:8px;
+      font-size:13px;
+      font-weight:700;
+      transition:.2s ease;
+    }
+
+    .nav-button:hover{
+      background:var(--brass-600);
+      color:white;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+      background:var(--forest-950);
+      color:var(--linen-50);
+      padding:85px 0 90px;
+      overflow:hidden;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 470px;
+      gap:65px;
+      align-items:start;
+      position:relative;
+      z-index:1;
+    }
+
+    .eyebrow{
+      font-family:'IBM Plex Mono',monospace;
+      color:var(--brass-500);
+      text-transform:uppercase;
+      letter-spacing:1.7px;
+      font-size:12px;
+      margin-bottom:18px;
+    }
+
+    .hero h1{
+      font-family:'Fraunces',serif;
+      font-size:clamp(45px,6vw,72px);
+      line-height:1.02;
+      letter-spacing:-2.5px;
+      max-width:700px;
+      margin-bottom:24px;
+    }
+
+    .hero h1 span{
+      color:var(--brass-500);
+    }
+
+    .hero-text{
+      color:var(--sage-200);
+      font-size:17px;
+      line-height:1.7;
+      max-width:620px;
+      margin-bottom:30px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-bottom:36px;
+    }
+
+    .btn-primary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      border-radius:9px;
+      background:var(--brass-500);
+      color:var(--forest-950);
+      font-weight:700;
+      font-size:14px;
+      transition:.2s ease;
+    }
+
+    .btn-primary:hover{
+      background:var(--brass-600);
+      color:white;
+      transform:translateY(-1px);
+    }
+
+    .btn-secondary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      border-radius:9px;
+      border:1px solid rgba(246,243,236,.22);
+      color:var(--linen-50);
+      font-weight:600;
+      font-size:14px;
+      transition:.2s ease;
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.06);
+    }
+
+    /* =========================
+       PROCESS
+    ========================= */
+
+    .hero-process{
+      margin-top:40px;
+      max-width:650px;
+    }
+
+    .process-title{
+      font-family:'Fraunces',serif;
+      font-size:29px;
+      margin-bottom:20px;
+      color:var(--linen-50);
+    }
+
+    .process-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .process-item{
+      display:flex;
+      align-items:flex-start;
+      gap:16px;
+      min-height:125px;
+      padding:22px;
+      border-radius:15px;
+      background:rgba(246,243,236,.065);
+      border:1px solid rgba(246,243,236,.14);
+      transition:.2s ease;
+    }
+
+    .process-item:hover{
+      background:rgba(246,243,236,.09);
+      transform:translateY(-2px);
+    }
+
+    .process-number{
+      width:38px;
+      height:38px;
+      flex-shrink:0;
+      border-radius:50%;
+      background:rgba(184,146,74,.18);
+      color:var(--brass-500);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:'IBM Plex Mono',monospace;
+      font-size:12px;
+      font-weight:600;
+    }
+
+    .process-item h4{
+      font-family:'Inter',sans-serif;
+      font-size:15px;
+      font-weight:600;
+      color:var(--linen-50);
+      margin:0 0 7px;
+    }
+
+    .process-item p{
+      color:var(--sage-200);
+      font-size:12.5px;
+      line-height:1.5;
+      margin:0;
+    }
+
+    /* =========================
+       QUOTE CARD
+    ========================= */
+
+    .calc-card{
+      background:var(--linen-50);
+      color:var(--ink-900);
+      border-radius:18px;
+      padding:28px;
+      box-shadow:0 25px 70px rgba(0,0,0,.25);
+    }
+
+    .calc-head{
+      margin-bottom:8px;
+    }
+
+    .calc-head h3{
+      font-family:'Fraunces',serif;
+      font-size:29px;
+      line-height:1.15;
+    }
+
+    .calc-sub{
+      color:var(--ink-600);
+      font-size:13px;
+      line-height:1.6;
+      margin-bottom:25px;
+    }
+
+    .calc-field{
+      margin-bottom:21px;
+    }
+
+    .field-label{
+      display:block;
+      font-size:12px;
+      font-weight:700;
+      color:var(--ink-900);
+      margin-bottom:9px;
+    }
+
+    .type-option-list{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:9px;
+    }
+
+    .type-option{
+      border:1px solid #D9DED8;
+      background:white;
+      border-radius:10px;
+      padding:13px 12px;
+      cursor:pointer;
+      text-align:left;
+      transition:.2s ease;
+      font-size:12px;
+      color:var(--ink-900);
+    }
+
+    .type-option:hover{
+      border-color:var(--brass-500);
+    }
+
+    .type-option.active{
+      border-color:var(--brass-500);
+      background:#F8F2E6;
+      box-shadow:inset 0 0 0 1px var(--brass-500);
+    }
+
+    .type-option strong{
+      display:block;
+      font-size:13px;
+      margin-bottom:3px;
+    }
+
+    .type-option span{
+      color:var(--ink-600);
+      font-size:11px;
+      line-height:1.4;
+    }
+
+    .pill-group{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+    }
+
+    .pill{
+      border:1px solid #D9DED8;
+      background:white;
+      border-radius:9px;
+      padding:11px 10px;
+      cursor:pointer;
+      font-size:11.5px;
+      color:var(--ink-900);
+      transition:.2s ease;
+    }
+
+    .pill:hover{
+      border-color:var(--brass-500);
+    }
+
+    .pill.active{
+      border-color:var(--brass-500);
+      background:#F8F2E6;
+      box-shadow:inset 0 0 0 1px var(--brass-500);
+      font-weight:600;
+    }
+
+    .customer-input{
+      width:100%;
+      border:1px solid #D9DED8;
+      background:white;
+      border-radius:9px;
+      padding:13px 13px;
+      font-size:13px;
+      color:var(--ink-900);
+      outline:none;
+      transition:.2s ease;
+    }
+
+    .customer-input::placeholder{
+      color:#929A94;
+    }
+
+    .customer-input:focus{
+      border-color:var(--brass-500);
+      box-shadow:0 0 0 3px rgba(184,146,74,.12);
+    }
+
+    .calc-result{
+      margin-top:25px;
+      padding-top:20px;
+      border-top:1px solid #D9DED8;
+    }
+
+    .calc-result-title{
+      font-size:12px;
+      font-weight:700;
+      margin-bottom:5px;
+    }
+
+    .calc-result-text{
+      color:var(--ink-600);
+      font-size:12px;
+      line-height:1.5;
+      margin-bottom:15px;
+    }
+
+    .calc-cta{
+      width:100%;
+      border:0;
+      border-radius:10px;
+      padding:14px;
+      background:var(--forest-800);
+      color:white;
+      font-size:13px;
+      font-weight:700;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .calc-cta:hover{
+      background:var(--forest-700);
+      transform:translateY(-1px);
+    }
+
+    .calc-cta:disabled{
+      opacity:.6;
+      cursor:not-allowed;
+      transform:none;
+    }
+
+    .calc-status{
+      margin-top:12px;
+      font-size:12px;
+      line-height:1.5;
+      display:none;
+    }
+
+    .calc-status.show{
+      display:block;
+    }
+
+    .calc-status.success{
+      color:#2A6B3F;
+    }
+
+    .calc-status.error{
+      color:#B0392E;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section{
+      padding:90px 0;
+    }
+
+    .section-eyebrow{
+      font-family:'IBM Plex Mono',monospace;
+      color:var(--brass-600);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      margin-bottom:13px;
+    }
+
+    .section-title{
+      font-family:'Fraunces',serif;
+      font-size:clamp(35px,5vw,52px);
+      line-height:1.08;
+      letter-spacing:-1.5px;
+      margin-bottom:18px;
+    }
+
+    .section-intro{
+      max-width:650px;
+      color:var(--ink-600);
+      font-size:15px;
+      line-height:1.7;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services{
+      background:var(--linen-50);
+    }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:45px;
+    }
+
+    .service-card{
+      background:white;
+      border:1px solid #E1E4DF;
+      border-radius:15px;
+      padding:27px;
+      transition:.2s ease;
+    }
+
+    .service-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 15px 35px rgba(20,32,26,.07);
+    }
+
+    .service-icon{
+      width:45px;
+      height:45px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      background:#F0E8D8;
+      margin-bottom:20px;
+      font-size:21px;
+    }
+
+    .service-card h3{
+      font-family:'Fraunces',serif;
+      font-size:23px;
+      margin-bottom:9px;
+    }
+
+    .service-card p{
+      color:var(--ink-600);
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    /* =========================
+       WORK AREA
+    ========================= */
+
+    .area{
+      background:var(--forest-800);
+      color:var(--linen-50);
+    }
+
+    .area-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:70px;
+      align-items:center;
+    }
+
+    .area .section-eyebrow{
+      color:var(--brass-500);
+    }
+
+    .area .section-title{
+      color:var(--linen-50);
+    }
+
+    .area .section-intro{
+      color:var(--sage-200);
+    }
+
+    .area-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:28px;
+    }
+
+    .area-item{
+      padding:10px 14px;
+      border:1px solid rgba(246,243,236,.15);
+      border-radius:30px;
+      color:var(--sage-200);
+      font-size:12px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .area-box{
+      border:1px solid rgba(246,243,236,.15);
+      background:rgba(255,255,255,.04);
+      border-radius:17px;
+      padding:30px;
+    }
+
+    .area-box h3{
+      font-family:'Fraunces',serif;
+      font-size:27px;
+      margin-bottom:10px;
+    }
+
+    .area-box p{
+      color:var(--sage-200);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    /* =========================
+       REVIEWS
+    ========================= */
+
+    .reviews{
+      background:var(--linen-100);
+    }
+
+    .reviews-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:45px;
+    }
+
+    .review{
+      background:white;
+      border-radius:15px;
+      padding:26px;
+      border:1px solid #E1E4DF;
+    }
+
+    .stars{
+      color:var(--brass-500);
+      letter-spacing:2px;
+      font-size:14px;
+      margin-bottom:15px;
+    }
+
+    .review p{
+      font-size:13px;
+      line-height:1.7;
+      color:var(--ink-600);
+      margin-bottom:20px;
+    }
+
+    .review-name{
+      font-size:12px;
+      font-weight:700;
+    }
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq-grid{
+      max-width:850px;
+      margin:45px auto 0;
+    }
+
+    .faq-item{
+      border-bottom:1px solid #D9DED8;
+    }
+
+    .faq-question{
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      border:0;
+      background:none;
+      padding:20px 0;
+      text-align:left;
+      cursor:pointer;
+      font-size:14px;
+      font-weight:600;
+      color:var(--ink-900);
+    }
+
+    .faq-plus{
+      font-size:20px;
+      font-weight:400;
+      transition:.2s ease;
+    }
+
+    .faq-answer{
+      display:none;
+      color:var(--ink-600);
+      font-size:13px;
+      line-height:1.7;
+      padding:0 0 20px;
+    }
+
+    .faq-item.open .faq-answer{
+      display:block;
+    }
+
+    .faq-item.open .faq-plus{
+      transform:rotate(45deg);
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta{
+      background:var(--forest-950);
+      color:var(--linen-50);
+      text-align:center;
+    }
+
+    .cta .section-title{
+      max-width:700px;
+      margin:0 auto 17px;
+    }
+
+    .cta p{
+      max-width:600px;
+      margin:0 auto 28px;
+      color:var(--sage-200);
+      font-size:14px;
+    }
+
+    .cta-buttons{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer{
+      background:#09150F;
+      color:var(--sage-200);
+      padding:45px 0 25px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr;
+      gap:50px;
+      padding-bottom:35px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .footer-logo{
+      font-family:'Fraunces',serif;
+      color:var(--linen-50);
+      font-size:25px;
+      margin-bottom:13px;
+    }
+
+    .footer-logo span{
+      color:var(--brass-500);
+    }
+
+    .footer-text{
+      max-width:370px;
+      color:#AAB8AE;
+      font-size:12px;
+      line-height:1.7;
+    }
+
+    .footer-column h4{
+      color:var(--linen-50);
+      font-size:12px;
+      margin-bottom:13px;
+    }
+
+    .footer-column a{
+      display:block;
+      color:#AAB8AE;
+      font-size:12px;
+      margin-bottom:8px;
+    }
+
+    .footer-column a:hover{
+      color:white;
+    }
+
+    .footer-bottom{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      padding-top:22px;
+      color:#7F9085;
+      font-size:11px;
+    }
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .whatsapp{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:999;
+      width:54px;
+      height:54px;
+      border-radius:50%;
+      background:#25D366;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-size:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,.2);
+      transition:.2s ease;
+    }
+
+    .whatsapp:hover{
+      transform:translateY(-3px);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media(max-width:1000px){
+
+      .hero-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+      }
+
+      .calc-card{
+        max-width:650px;
+      }
+
+      .services-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .area-grid{
+        grid-template-columns:1fr;
+      }
+
+      .reviews-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:700px){
+
+      .container{
+        width:min(100% - 28px,1180px);
+      }
+
+      .nav-inner{
+        min-height:68px;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+      .hero{
+        padding:60px 0 65px;
+      }
+
+      .hero h1{
+        font-size:46px;
+        letter-spacing:-1.7px;
+      }
+
+      .hero-text{
+        font-size:15px;
+      }
+
+      section{
+        padding:70px 0;
+      }
+
+      .services-grid{
+        grid-template-columns:1fr;
+      }
+
+      .reviews-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+      }
+
+      .calc-card{
+        padding:22px;
+      }
+    }
+
+    @media(max-width:600px){
+
+      .process-grid{
+        grid-template-columns:1fr;
+        gap:11px;
+      }
+
+      .process-item{
+        min-height:100px;
+        padding:18px;
+        border-radius:14px;
+      }
+
+      .type-option-list{
+        grid-template-columns:1fr;
+      }
+
+      .pill-group{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAV
+  ========================= -->
+
+  <nav class="nav">
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo">
+        Alpha<span>schoon</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#diensten">Diensten</a>
+        <a href="#werkgebied">Werkgebied</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <a href="#boeken" class="nav-button">
+        Offerte aanvragen
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <header class="hero" id="home">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          Professionele interieur schoonmaak
+        </div>
+
+        <h1>
+          Een schoon interieur.<br>
+          <span>Zonder gedoe.</span>
+        </h1>
+
+        <p class="hero-text">
+          Alphaschoon zorgt voor een schoon en fris interieur.
+          Van eenmalige deep clean tot periodieke schoonmaak.
+          Wij werken netjes, betrouwbaar en met aandacht voor detail.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#boeken" class="btn-primary">
+            Offerte aanvragen
+          </a>
+
+          <a href="#diensten" class="btn-secondary">
+            Bekijk onze diensten
+          </a>
+        </div>
+
+
+        <!-- WERKWIJZE -->
+
+        <div class="hero-process">
+
+          <div class="process-title">
+            Zo werkt het
+          </div>
+
+          <div class="process-grid">
+
+            <div class="process-item">
+              <div class="process-number">01</div>
+
+              <div>
+                <h4>Offerte aanvragen</h4>
+                <p>
+                  Vul kort in wat je nodig hebt en laat je gegevens achter.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="process-item">
+              <div class="process-number">02</div>
+
+              <div>
+                <h4>Wij bekijken je aanvraag</h4>
+                <p>
+                  We kijken naar het soort pand, de oppervlakte en je wensen.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="process-item">
+              <div class="process-number">03</div>
+
+              <div>
+                <h4>Persoonlijke offerte</h4>
+                <p>
+                  Je ontvangt een offerte die past bij jouw situatie.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="process-item">
+              <div class="process-number">04</div>
+
+              <div>
+                <h4>Schoonmaak plannen</h4>
+                <p>
+                  Akkoord? Dan spreken we samen een geschikt moment af.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           OFFERTE FORMULIER
+      ========================= -->
+
+      <div class="calc-card" id="boeken">
+
+        <div class="calc-head">
+          <h3>Vraag je offerte aan</h3>
+        </div>
+
+        <div class="calc-sub">
+          Kies wat je nodig hebt.
+          Wij maken daarna een persoonlijke offerte.
+        </div>
+
+
+        <!-- DIENST -->
+
+        <div class="calc-field">
+
+          <label class="field-label">
+            Wat heb je nodig?
+          </label>
+
+          <div class="type-option-list" id="typeGroup">
+
+            <button class="type-option active" type="button">
+
+              <strong>Algemene schoonmaak</strong>
+
+              <span>
+                Stof afnemen, sanitair reinigen, keuken schoonmaken,
+                dweilen en opruimen.
+              </span>
+
+            </button>
+
+
+            <button class="type-option" type="button">
+
+              <strong>Deep clean</strong>
+
+              <span>
+                Een grondige schoonmaak voor een extra fris interieur.
+              </span>
+
+            </button>
+
+
+            <button class="type-option" type="button">
+
+              <strong>Vloeren, tapijt & meubels</strong>
+
+              <span>
+                Reinigen van vloeren, tapijt en meubels.
+              </span>
+
+            </button>
+
+
+            <button class="type-option" type="button">
+
+              <strong>Eindschoonmaak</strong>
+
+              <span>
+                Grondige schoonmaak bij een verhuizing of oplevering.
+              </span>
+
+            </button>
+
+
+            <button class="type-option" type="button">
+
+              <strong>Zakelijke schoonmaak</strong>
+
+              <span>
+                Schoonmaak van kantoren en andere bedrijfsruimtes.
+              </span>
+
+            </button>
+
+
+            <button class="type-option" type="button">
+
+              <strong>Periodieke schoonmaak</strong>
+
+              <span>
+                Regelmatige schoonmaak volgens een vaste planning.
+              </span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- TYPE PAND -->
+
+        <div class="calc-field">
+
+          <label class="field-label">
+            Type pand
+          </label>
+
+          <div class="pill-group" id="pandGroup">
+
+            <button class="pill active" type="button">
+              🏠 Woning
+            </button>
+
+            <button class="pill" type="button">
+              🏢 Bedrijfspand
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- OPPERVLAKTE -->
+
+        <div class="calc-field">
+
+          <label class="field-label">
+            Oppervlakte
+          </label>
+
+          <div class="pill-group" id="m2Group">
+
+            <button class="pill active" type="button">
+              50 – 100 m²
+            </button>
+
+            <button class="pill" type="button">
+              100 – 200 m²
+            </button>
+
+            <button class="pill" type="button">
+              200 – 300 m²
+            </button>
+
+            <button class="pill" type="button">
+              300+ m²
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- FREQUENTIE -->
+
+        <div class="calc-field">
+
+          <label class="field-label">
+            Hoe vaak?
+          </label>
+
+          <div class="pill-group" id="freqGroup">
+
+            <button class="pill active" type="button">
+              Eenmalig
+            </button>
+
+            <button class="pill" type="button">
+              Wekelijks
+            </button>
+
+            <button class="pill" type="button">
+              2× per week
+            </button>
+
+            <button class="pill" type="button">
+              Om de week
+            </button>
+
+            <button
+              class="pill"
+              type="button"
+              style="grid-column:1 / -1;"
+            >
+              Anders / in overleg
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- POSTCODE -->
+
+        <div class="calc-field">
+
+          <label class="field-label">
+            Postcode
+          </label>
+
+          <input
+            type="text"
+            id="customerPostcode"
+            class="customer-input"
+            placeholder="Bijvoorbeeld 3511 AA"
+          >
+
+        </div>
+
+
+        <!-- TELEFOON -->
+
+        <div class="calc-field">
+
+          <label class="field-label">
+            Telefoonnummer
+          </label>
+
+          <input
+            type="tel"
+            id="customerPhone"
+            class="customer-input"
+            placeholder="06 12 34 56 78"
+          >
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="calc-field">
+
+          <label class="field-label">
+            E-mailadres
+          </label>
+
+          <input
+            type="email"
+            id="customerEmail"
+            class="customer-input"
+            placeholder="jouw@email.nl"
+          >
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div class="calc-result">
+
+          <div class="calc-result-title">
+            Persoonlijke offerte
+          </div>
+
+          <div class="calc-result-text">
+            Wij werken zonder vaste prijzen.
+            Na je aanvraag bekijken we je wensen en sturen we een
+            persoonlijke offerte.
+          </div>
+
+          <button
+            class="calc-cta"
+            id="bookBtn"
+            type="button"
+          >
+            Offerte aanvragen
+          </button>
+
+          <div class="calc-status" id="formStatus"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       DIENSTEN
+  ========================= -->
+
+  <section class="services" id="diensten">
+
+    <div class="container">
+
+      <div class="section-eyebrow">
+        Onze diensten
+      </div>
+
+      <h2 class="section-title">
+        Schoonmaak voor ieder interieur.
+      </h2>
+
+      <p class="section-intro">
+        Van een normale schoonmaak tot een grondige deep clean.
+        Wij verzorgen alleen interieur schoonmaak en stemmen onze
+        werkzaamheden af op wat jij nodig hebt.
+      </p>
+
+
+      <div class="services-grid">
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            🧹
+          </div>
+
+          <h3>
+            Algemene schoonmaak
+          </h3>
+
+          <p>
+            Stof afnemen, sanitair reinigen, keuken schoonmaken,
+            dweilen en opruimen. Geschikt voor regelmatig onderhoud.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            ✨
+          </div>
+
+          <h3>
+            Deep clean
+          </h3>
+
+          <p>
+            Een grondige schoonmaak waarbij we extra aandacht geven
+            aan plekken die bij een normale schoonmaak minder vaak
+            worden meegenomen.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            🛋️
+          </div>
+
+          <h3>
+            Vloeren, tapijt & meubels
+          </h3>
+
+          <p>
+            Extra aandacht voor vloeren, tapijt en meubels zodat het
+            interieur weer fris en verzorgd aanvoelt.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            🏠
+          </div>
+
+          <h3>
+            Eindschoonmaak
+          </h3>
+
+          <p>
+            Een grondige schoonmaak van een woning of ruimte voordat
+            deze wordt opgeleverd, verhuisd of opnieuw gebruikt.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            🏢
+          </div>
+
+          <h3>
+            Zakelijke schoonmaak
+          </h3>
+
+          <p>
+            Voor kantoren en andere bedrijfsruimtes. We zorgen voor
+            een nette en frisse werkomgeving.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">
+            📅
+          </div>
+
+          <h3>
+            Periodieke schoonmaak
+          </h3>
+
+          <p>
+            Regelmatige schoonmaak op een moment dat bij jouw planning
+            past. Bijvoorbeeld wekelijks of om de week.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       WERKGEBIED
+  ========================= -->
+
+  <section class="area" id="werkgebied">
+
+    <div class="container area-grid">
+
+      <div>
+
+        <div class="section-eyebrow">
+          Werkgebied
+        </div>
+
+        <h2 class="section-title">
+          Wij komen bij je langs.
+        </h2>
+
+        <p class="section-intro">
+          Alphaschoon werkt in en rondom Utrecht.
+          Staat jouw plaats er niet tussen? Neem gerust contact met ons op.
+        </p>
+
+        <div class="area-list">
+
+          <div class="area-item">Utrecht</div>
+          <div class="area-item">Den Dolder</div>
+          <div class="area-item">Zeist</div>
+          <div class="area-item">Houten</div>
+          <div class="area-item">De Bilt</div>
+          <div class="area-item">Bilthoven</div>
+          <div class="area-item">Doorn</div>
+          <div class="area-item">Huis ter Heide</div>
+          <div class="area-item">Soesterberg</div>
+          <div class="area-item">Bunnik</div>
+
+        </div>
+
+      </div>
+
+
+      <div class="area-box">
+
+        <h3>
+          Niet zeker of we bij jou komen?
+        </h3>
+
+        <p>
+          Stuur je postcode mee met je offerteaanvraag.
+          Dan kunnen we direct bekijken of jouw locatie binnen ons
+          werkgebied valt.
+        </p>
+
+        <br>
+
+        <a href="#boeken" class="btn-primary">
+          Offerte aanvragen
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       REVIEWS
+  ========================= -->
+
+  <section class="reviews" id="reviews">
+
+    <div class="container">
+
+      <div class="section-eyebrow">
+        Reviews
+      </div>
+
+      <h2 class="section-title">
+        Wat klanten belangrijk vinden.
+      </h2>
+
+      <p class="section-intro">
+        Een goede schoonmaak draait niet alleen om schoonmaken,
+        maar ook om netjes werken, duidelijke afspraken en
+        betrouwbaarheid.
+      </p>
+
+
+      <div class="reviews-grid">
+
+        <div class="review">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            "Alles was netjes schoongemaakt en de afspraken waren
+            duidelijk. Heel fijn dat alles gewoon goed geregeld was."
+          </p>
+
+          <div class="review-name">
+            Klant uit Utrecht
+          </div>
+
+        </div>
+
+
+        <div class="review">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            "De woning was na de schoonmaak echt een stuk frisser.
+            Ze werkten netjes en namen de tijd."
+          </p>
+
+          <div class="review-name">
+            Klant uit Zeist
+          </div>
+
+        </div>
+
+
+        <div class="review">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            "Goede communicatie en een mooi resultaat.
+            Zeker voor een grondige schoonmaak een aanrader."
+          </p>
+
+          <div class="review-name">
+            Klant uit De Bilt
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FAQ
+  ========================= -->
+
+  <section id="faq">
+
+    <div class="container">
+
+      <div style="text-align:center;">
+
+        <div class="section-eyebrow">
+          Veelgestelde vragen
+        </div>
+
+        <h2 class="section-title">
+          Heb je nog vragen?
+        </h2>
+
+      </div>
+
+
+      <div class="faq-grid">
+
+
+        <div class="faq-item">
+
+          <button class="faq-question" type="button">
+
+            Werken jullie met vaste prijzen?
+
+            <span class="faq-plus">
+              +
+            </span>
+
+          </button>
+
+          <div class="faq-answer">
+            Nee. Wij werken met persoonlijke offertes.
+            De prijs hangt onder andere af van het type schoonmaak,
+            de oppervlakte, de frequentie en de situatie.
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question" type="button">
+
+            Doen jullie ook deep cleaning?
+
+            <span class="faq-plus">
+              +
+            </span>
+
+          </button>
+
+          <div class="faq-answer">
+            Ja. Wij bieden deep cleaning aan voor een extra grondige
+            schoonmaak van het interieur.
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question" type="button">
+
+            Werken jullie ook voor bedrijven?
+
+            <span class="faq-plus">
+              +
+            </span>
+
+          </button>
+
+          <div class="faq-answer">
+            Ja. Wij doen ook zakelijke interieur schoonmaak voor
+            kantoren en andere bedrijfsruimtes.
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question" type="button">
+
+            Hoe vraag ik een offerte aan?
+
+            <span class="faq-plus">
+              +
+            </span>
+
+          </button>
+
+          <div class="faq-answer">
+            Vul het formulier bovenaan de pagina in.
+            Vul je postcode, telefoonnummer en e-mailadres in.
+            Daarna kun je de offerteaanvraag naar ons versturen.
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question" type="button">
+
+            In welke plaatsen werken jullie?
+
+            <span class="faq-plus">
+              +
+            </span>
+
+          </button>
+
+          <div class="faq-answer">
+            Wij werken onder andere in Utrecht, Zeist, Houten,
+            De Bilt, Bilthoven, Den Dolder, Doorn, Bunnik,
+            Soesterberg en Huis ter Heide.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CTA
+  ========================= -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="section-eyebrow">
+        Klaar voor een schoon interieur?
+      </div>
+
+      <h2 class="section-title">
+        Vraag vandaag nog je persoonlijke offerte aan.
+      </h2>
+
+      <p>
+        Vertel ons wat je nodig hebt en ontvang een offerte
+        die past bij jouw situatie.
+      </p>
+
+      <div class="cta-buttons">
+
+        <a href="#boeken" class="btn-primary">
+          Offerte aanvragen
+        </a>
+
+        <a href="https://wa.me/31618802227" class="btn-secondary">
+          WhatsApp ons
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="footer-logo">
+            Alpha<span>schoon</span>
+          </div>
+
+          <p class="footer-text">
+            Professionele interieur schoonmaak in Utrecht en omgeving.
+            Van algemene schoonmaak tot deep clean en periodieke
+            schoonmaak.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Navigatie
+          </h4>
+
+          <a href="#diensten">
+            Diensten
+          </a>
+
+          <a href="#werkgebied">
+            Werkgebied
+          </a>
+
+          <a href="#reviews">
+            Reviews
+          </a>
+
+          <a href="#faq">
+            FAQ
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Contact
+          </h4>
+
+          <a href="mailto:Alphaschoon@gmail.com">
+            Alphaschoon@gmail.com
+          </a>
+
+          <a href="tel:+31618802227">
+            +31 6 18 80 22 27
+          </a>
+
+          <a href="https://wa.me/31618802227">
+            WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 Alphaschoon. Alle rechten voorbehouden.
+        </div>
+
+        <div>
+          KvK 42160159 · Volledig verzekerd
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       WHATSAPP BUTTON
+  ========================= -->
+
+  <a
+  href="https://wa.me/31618802227"
+  class="whatsapp"
+  aria-label="WhatsApp"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  ☎
+</a>
+    
+
+
+
+  <!-- =========================
+       EMAILJS SDK
+  ========================= -->
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /* =========================
+       EMAILJS INIT
+    ========================= */
+
+    (function(){
+      emailjs.init({
+        publicKey: "XDB4wJhQofikuS3Wq"
+      });
+    })();
+
+    const EMAILJS_SERVICE_ID = "service_6qfg2zn";
+    const EMAILJS_TEMPLATE_ID = "template_fqa46tb";
+
+
+    /* =========================
+       SELECTIE KNOPPEN
+    ========================= */
+
+    function setupSelection(groupId, itemClass){
+
+      const group = document.getElementById(groupId);
+
+      if(!group) return;
+
+      const items = group.querySelectorAll(itemClass);
+
+      items.forEach(item => {
+
+        item.addEventListener('click', () => {
+
+          items.forEach(el => {
+            el.classList.remove('active');
+          });
+
+          item.classList.add('active');
+
+        });
+
+      });
+
+    }
+
+
+    setupSelection('typeGroup', '.type-option');
+    setupSelection('pandGroup', '.pill');
+    setupSelection('m2Group', '.pill');
+    setupSelection('freqGroup', '.pill');
+
+
+    /* =========================
+       OFFERTE AANVRAGEN
+    ========================= */
+
+    const bookBtn = document.getElementById('bookBtn');
+    const formStatus = document.getElementById('formStatus');
+
+    function showStatus(message, type){
+      formStatus.textContent = message;
+      formStatus.className = 'calc-status show ' + type;
+    }
+
+    bookBtn.addEventListener('click', function(){
+
+      const serviceElement =
+        document.querySelector('#typeGroup .type-option.active');
+
+      const pandElement =
+        document.querySelector('#pandGroup .pill.active');
+
+      const m2Element =
+        document.querySelector('#m2Group .pill.active');
+
+      const freqElement =
+        document.querySelector('#freqGroup .pill.active');
+
+
+      const service =
+        serviceElement
+          ? serviceElement.querySelector('strong').textContent.trim()
+          : '';
+
+      const pand =
+        pandElement
+          ? pandElement.textContent.trim()
+          : '';
+
+      const m2 =
+        m2Element
+          ? m2Element.textContent.trim()
+          : '';
+
+      const frequency =
+        freqElement
+          ? freqElement.textContent.trim()
+          : '';
+
+
+      const postcode =
+        document.getElementById('customerPostcode')
+          .value
+          .trim();
+
+      const phone =
+        document.getElementById('customerPhone')
+          .value
+          .trim();
+
+      const email =
+        document.getElementById('customerEmail')
+          .value
+          .trim();
+
+
+      /* CONTROLE */
+
+      if(!postcode || !phone || !email){
+
+        showStatus(
+          'Vul je postcode, telefoonnummer en e-mailadres in.',
+          'error'
+        );
+
+        return;
+      }
+
+
+      /* EMAIL CONTROLE */
+
+      if(
+        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+      ){
+
+        showStatus(
+          'Vul een geldig e-mailadres in.',
+          'error'
+        );
+
+        return;
+      }
+
+
+      /* VERSTUREN VIA EMAILJS */
+
+      const templateParams = {
+        service: service,
+        pand: pand,
+        m2: m2,
+        frequency: frequency,
+        postcode: postcode,
+        phone: phone,
+        email: email
+      };
+
+      bookBtn.disabled = true;
+      bookBtn.textContent = 'Bezig met versturen...';
+      formStatus.className = 'calc-status';
+
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(function(){
+
+          bookBtn.disabled = false;
+          bookBtn.textContent = 'Offerte aanvragen';
+
+          showStatus(
+            'Bedankt! Je offerteaanvraag is verstuurd. We nemen zo snel mogelijk contact met je op.',
+            'success'
+          );
+
+          document.getElementById('customerPostcode').value = '';
+          document.getElementById('customerPhone').value = '';
+          document.getElementById('customerEmail').value = '';
+
+        })
+        .catch(function(error){
+
+          bookBtn.disabled = false;
+          bookBtn.textContent = 'Offerte aanvragen';
+
+          showStatus(
+            'Er ging iets mis bij het versturen. Probeer het opnieuw of neem contact op via WhatsApp.',
+            'error'
+          );
+
+          console.error('EmailJS error:', error);
+
+        });
+
+    });
+
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    document.querySelectorAll('.faq-question')
+      .forEach(button => {
+
+        button.addEventListener('click', () => {
+
+          const item =
+            button.closest('.faq-item');
+
+          item.classList.toggle('open');
+
+        });
+
+      });
+
+  </script>
+
+</body>
+</html>
